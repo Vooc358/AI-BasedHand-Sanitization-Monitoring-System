@@ -1,0 +1,93 @@
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--  <head>-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+<!--    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">-->
+<!--    <title>YOLO Frame Results</title>-->
+<!--  </head>-->
+<!--  <body>-->
+<!--    <div class="container">-->
+<!--      <h1 class="mt-5">{{ message }}</h1>-->
+
+<!--      {% if frames %}-->
+<!--        <h2>Frames with Predictions:</h2>-->
+<!--        <div class="row">-->
+<!--          {% for frame in frames %}-->
+<!--            <div class="col-md-3">-->
+<!--              <img src="{{ url_for('static', filename=frame) }}" class="img-fluid" alt="Frame">-->
+<!--            </div>-->
+<!--          {% endfor %}-->
+<!--        </div>-->
+<!--      {% else %}-->
+<!--        <p>No frames were processed with high-confidence predictions.</p>-->
+<!--      {% endif %}-->
+
+<!--      <br>-->
+<!--      <a href="/" class="btn btn-primary">Upload Another Video</a>-->
+<!--    </div>-->
+<!--  </body>-->
+<!--</html>-->
+
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--  <head>-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+<!--    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">-->
+<!--    <title>YOLO Frame Results</title>-->
+<!--  </head>-->
+<!--  <body>-->
+<!--    <div class="container">-->
+<!--      <h1 class="mt-5">{{ message }}</h1>-->
+
+<!--      {% if frames %}-->
+<!--        <h2>Frames with Predictions:</h2>-->
+<!--        <div class="row">-->
+<!--          {% for frame in frames %}-->
+<!--            <div class="col-md-3">-->
+<!--              <img src="{{ url_for('static', filename=frame) }}" class="img-fluid" alt="Frame">-->
+<!--            </div>-->
+<!--          {% endfor %}-->
+<!--        </div>-->
+<!--      {% else %}-->
+<!--        <p>No frames were processed with high-confidence predictions.</p>-->
+<!--      {% endif %}-->
+
+<!--      <br>-->
+<!--      <a href="/" class="btn btn-primary">Upload Another Video</a>-->
+<!--    </div>-->
+<!--  </body>-->
+<!--</html>-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <title>YOLO Frame Results</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-5">{{ message }}</h1>
+
+      {% if frames %}
+        <h2>Frames with Predictions:</h2>
+        <div class="row">
+          {% for frame in frames %}
+            <div class="col-md-3">
+              <img src="{{ url_for('static', filename=frame) }}" class="img-fluid" alt="Frame">
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p>No frames were processed with high-confidence predictions.</p>
+      {% endif %}
+
+      <br>
+      <a href="/" class="btn btn-primary">Upload Another Video</a>
+    </div>
+  </body>
+</html>
+

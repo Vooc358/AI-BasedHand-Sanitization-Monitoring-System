@@ -1,0 +1,94 @@
+
+
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--  <head>-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+<!--    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">-->
+<!--    <title>YOLO Object Detection</title>-->
+<!--  </head>-->
+<!--  <body>-->
+<!--    <div class="container">-->
+<!--      <h1 class="my-4">YOLO Object Detection</h1>-->
+<!--      <form method="POST" enctype="multipart/form-data">-->
+<!--        <h2 class="h3 mb-3 font-weight-normal">Upload a video</h2>-->
+<!--        <input type="file" name="file" class="form-control-file" id="inputfile" required>-->
+<!--        <br/>-->
+<!--        <button class="btn btn-lg btn-primary btn-block" type="submit">Upload</button>-->
+<!--      </form>-->
+<!--      <br/>-->
+<!--      <a href="/real_time_test" class="btn btn-lg btn-success btn-block">Real-Time Test</a>-->
+<!--      <p class="mt-5 mb-3 text-muted">Built using Pytorch & Flask</p>-->
+<!--    </div>-->
+<!--  </body>-->
+<!--</html>-->
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <title>YOLO Object Detection</title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #000080, #1e90ff);
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+      }
+      h1, h2, p {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+      video {
+        max-width: 100%;
+        border: 2px solid white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <!-- Left Side: Form -->
+        <div class="col-md-6">
+          <h1 class="my-4">YOLO Object Detection</h1>
+          <form method="POST" enctype="multipart/form-data" id="uploadForm">
+            <h2 class="h3 mb-3 font-weight-normal">Upload a video</h2>
+            <input type="file" name="file" class="form-control-file" id="inputfile" accept="video/*" required>
+            <br/>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Upload</button>
+          </form>
+          <br/>
+          <a href="/real_time_test" class="btn btn-lg btn-success btn-block">Real-Time Test</a>
+          <p class="mt-5 mb-3 text-muted">Built using Pytorch & Flask</p>
+        </div>
+
+        <!-- Right Side: Video Display -->
+        <div class="col-md-6">
+          <h2 class="h3 mb-3 font-weight-normal">Uploaded Video</h2>
+          <video id="videoPreview" controls></video>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript to preview the video
+      document.getElementById('inputfile').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+          const videoPreview = document.getElementById('videoPreview');
+          videoPreview.src = URL.createObjectURL(file);
+          videoPreview.load();
+        }
+      });
+    </script>
+  </body>
+</html>
